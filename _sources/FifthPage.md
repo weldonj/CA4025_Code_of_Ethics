@@ -1,4 +1,4 @@
-## Consider the Environemnt
+## Consider the Environment
 
 Researchers at the University of Massachusetts found that an average, off the shelf deep learning model can emit over 626,000lbs of Carbon Dioxide[1]. This was the equivalent of the lifetime emissions of 5 average family cars, including their manufacture and delivery. Data Science has so far, for the most part, taken the approach that the more compute that one can get their hands on, for the longest possible time, the better the results will be for whatever deep learning that needs to be performed. There is a growing field of research that attempts to reduce this colossal carbon footprint by being more specific and precise when training these models. Going forward it seems that any large Data Science project would need to address these concerns in some way in order to be deemed ethical in terms of potential environmental damage.
 
