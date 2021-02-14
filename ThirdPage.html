@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CA4025_Code_of_Ethics &#8212; CA4025 - Data Science Code of Ethics - John Weldon</title>
+    <title>DATA SCIENCE CODE OF ETHICS OVERVIEW &#8212; CA4025 - Data Science Code of Ethics - John Weldon</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,6 +55,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DATA SCIENCE CODE OF ETHICS OVERVIEW" href="FourthPage.html" />
+    <link rel="prev" title="DATA SCIENCE CODE OF ETHICS OVERVIEW" href="SecondPage.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -120,9 +122,9 @@
   Data Modelling
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="ThirdPage.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    DATA SCIENCE CODE OF ETHICS OVERVIEW
   </a>
  </li>
@@ -190,7 +192,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/ThirdPage.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -215,6 +217,25 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-dataset">
+   The Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#system-types">
+   System Types
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -222,8 +243,23 @@
         
               <div>
                 
-  <div class="section" id="ca4025-code-of-ethics">
-<h1>CA4025_Code_of_Ethics<a class="headerlink" href="#ca4025-code-of-ethics" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="data-science-code-of-ethics-overview">
+<h1>DATA SCIENCE CODE OF ETHICS OVERVIEW<a class="headerlink" href="#data-science-code-of-ethics-overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-dataset">
+<h2>The Dataset<a class="headerlink" href="#the-dataset" title="Permalink to this headline">¶</a></h2>
+<p>The dataset I am using here is a list of 200,000 Steam Video Game user behaviors, with user-id, game-title, behavior-name, value. The behaviors included are ‘own’ and ‘play’. The behaviour I am interested in is ‘play’ as this is a numeric figure, representing how many hours the particular user has spent playing the games that they have purchased. I will be using this to create a derived rating score that the recommender system will then be able to use.</p>
+</div>
+<div class="section" id="system-types">
+<h2>System Types<a class="headerlink" href="#system-types" title="Permalink to this headline">¶</a></h2>
+<p><strong>Collaborative Filtering -</strong></p>
+<p>This approach to recommendation requires a lot of data about users’ preferences. Collaborative filtering doesn’t know anything about the content itself, it doesn’t attempt to analyse them at all. Instead it makes the assumption that if User A tends to give similar weights to content that User B does, they both enjoy similar content. Therefore, if User B likes content that User A has not been exposed to yet, it’s likely that User A will be happy to have that content recommended to them. This user preference data can either be explicit (the user actually rates the content) or implicit (analyse which content the user engages with most often and for long periods of time). Due to Collaborative Filtering’s reliance on user data, it suffers from what’s known as the “Cold Start” problem. Brand new users have no preference data, and so the system will always struggle to know what to recommend.</p>
+<p><strong>Content-Based Filtering -</strong></p>
+<p>Unlike the previous approach, here the content being recommended is also closely analysed. It can be a lot more difficult to collect the data as it’s not at all easy to identify how the individual features relate to user preferences. Two main data categories are used in content based music recommendation systems. Metadata about the content, and also the content itself. For music as an example, this can be features such as beats per minute, what chords are played in the song, and even just how loud it is. One big advantage that content based filtering has over collaborative filtering is that it can be difficult to get users to actually rate content, whereas the content itself can often be freely analysed.</p>
+<p><strong>Hybrid Model -</strong></p>
+<p>This is exactly as it sounds, with a blend of both collaborative filtering and content based filtering. These models can outperform either of the other two on their own, but it is difficult to find data that combines both user ratings and actual data about the content itself.</p>
+<p><strong>My Approach -</strong></p>
+<p>For this recommender system, I will be using Collaborative Filtering with Spark ML. The dataset doesn’t contain any information about the video games themselves, just user preference, and so this is the only real choice that I have here.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -254,6 +290,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="SecondPage.html" title="previous page">DATA SCIENCE CODE OF ETHICS OVERVIEW</a>
+    <a class='right-next' id="next-link" href="FourthPage.html" title="next page">DATA SCIENCE CODE OF ETHICS OVERVIEW</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

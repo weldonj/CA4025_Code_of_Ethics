@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collaborative Filtering Recommender System &#8212; CA4025 - Data Science Code of Ethics - John Weldon</title>
+    <title>DATA SCIENCE CODE OF ETHICS OVERVIEW &#8212; CA4025 - Data Science Code of Ethics - John Weldon</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,6 +55,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DATA SCIENCE CODE OF ETHICS OVERVIEW" href="SecondPage.html" />
     <link rel="prev" title="DATASET AND TYPES OF RECOMMENDER SYSTEMS" href="Intro_and_Desc_of_Data.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -94,13 +95,61 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Overview
+  Data Collection
  </span>
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Collaborative Filtering Recommender System
+   DATA SCIENCE CODE OF ETHICS OVERVIEW
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Data Analysis
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="SecondPage.html">
+   DATA SCIENCE CODE OF ETHICS OVERVIEW
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Data Modelling
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ThirdPage.html">
+   DATA SCIENCE CODE OF ETHICS OVERVIEW
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Data Storage
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FourthPage.html">
+   DATA SCIENCE CODE OF ETHICS OVERVIEW
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Team and Environment
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FifthPage.html">
+   DATA SCIENCE CODE OF ETHICS OVERVIEW
   </a>
  </li>
 </ul>
@@ -143,9 +192,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/FirstPage.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/FirstPage.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -163,23 +212,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/FirstPage.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -191,33 +223,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#import-modules-create-spark-session-and-load-in-the-dataset">
-   Import Modules, create Spark session and load in the Dataset
+  <a class="reference internal nav-link" href="#the-dataset">
+   The Dataset
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quick-look-at-the-data-and-tidying">
-   Quick look at the Data and tidying
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-derived-ratings-column">
-   Create a derived Ratings column
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build-and-train-the-model">
-   Build and train the Model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluate-the-model">
-   Evaluate the Model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#recommendations">
-   Recommendations
+  <a class="reference internal nav-link" href="#system-types">
+   System Types
   </a>
  </li>
 </ul>
@@ -231,820 +243,22 @@
         
               <div>
                 
-  <div class="section" id="collaborative-filtering-recommender-system">
-<h1>Collaborative Filtering Recommender System<a class="headerlink" href="#collaborative-filtering-recommender-system" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="import-modules-create-spark-session-and-load-in-the-dataset">
-<h2>Import Modules, create Spark session and load in the Dataset<a class="headerlink" href="#import-modules-create-spark-session-and-load-in-the-dataset" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">pyspark.sql.functions</span> <span class="k">as</span> <span class="nn">func</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="n">DateType</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">,</span><span class="n">NumericType</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="n">col</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="n">DoubleType</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql.window</span> <span class="kn">import</span> <span class="n">Window</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml.feature</span> <span class="kn">import</span> <span class="n">QuantileDiscretizer</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml.feature</span> <span class="kn">import</span> <span class="n">Bucketizer</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml.evaluation</span> <span class="kn">import</span> <span class="n">RegressionEvaluator</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml.classification</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml.evaluation</span> <span class="kn">import</span> <span class="n">BinaryClassificationEvaluator</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml.feature</span> <span class="kn">import</span> <span class="n">HashingTF</span><span class="p">,</span> <span class="n">Tokenizer</span>
-<span class="kn">from</span> <span class="nn">pyspark.ml.tuning</span> <span class="kn">import</span> <span class="n">CrossValidator</span><span class="p">,</span> <span class="n">ParamGridBuilder</span><span class="p">,</span><span class="n">CrossValidatorModel</span>
-
-<span class="c1"># Create our Spark Session</span>
-<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s1">&#39;recnn&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Once the spark session was created, it was time to read in the dataset from the HDFS as below</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;hdfs://localhost:9000/john/hadoop/input/steam-200k.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="quick-look-at-the-data-and-tidying">
-<h2>Quick look at the Data and tidying<a class="headerlink" href="#quick-look-at-the-data-and-tidying" title="Permalink to this headline">¶</a></h2>
-<p>Now I wanted to take a quick look at the dataset and what the rows looked like</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Row(_c0=&#39;151603712&#39;, _c1=&#39;The Elder Scrolls V Skyrim&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;The Elder Scrolls V Skyrim&#39;, _c2=&#39;play&#39;, _c3=&#39;273.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Fallout 4&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Fallout 4&#39;, _c2=&#39;play&#39;, _c3=&#39;87.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Spore&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Spore&#39;, _c2=&#39;play&#39;, _c3=&#39;14.9&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Fallout New Vegas&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Fallout New Vegas&#39;, _c2=&#39;play&#39;, _c3=&#39;12.1&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Left 4 Dead 2&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Left 4 Dead 2&#39;, _c2=&#39;play&#39;, _c3=&#39;8.9&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;HuniePop&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;HuniePop&#39;, _c2=&#39;play&#39;, _c3=&#39;8.5&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Path of Exile&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Path of Exile&#39;, _c2=&#39;play&#39;, _c3=&#39;8.1&#39;, _c4=&#39;0&#39;),
- Row(_c0=&#39;151603712&#39;, _c1=&#39;Poly Bridge&#39;, _c2=&#39;purchase&#39;, _c3=&#39;1.0&#39;, _c4=&#39;0&#39;)]
-</pre></div>
-</div>
-</div>
-</div>
-<p>And now a look at some basic stats, including the count of how many entries we have in the dataset (200,000) the maximum play time of any game by any user (999 hours) and the minimum play time of any game by any user (0.1 hours)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------+-------------------+----------------+--------+------------------+------+
-|summary|                _c0|             _c1|     _c2|               _c3|   _c4|
-+-------+-------------------+----------------+--------+------------------+------+
-|  count|             200000|          200000|  200000|            200000|200000|
-|   mean|  1.0365586594664E8|           140.0|    null|17.874383999999942|   0.0|
-| stddev|7.208073512913969E7|             0.0|    null|138.05695165086743|   0.0|
-|    min|          100012061|     007 Legends|    play|               0.1|     0|
-|    max|           99992274|theHunter Primal|purchase|             999.0|     0|
-+-------+-------------------+----------------+--------+------------------+------+
-</pre></div>
-</div>
-</div>
-</div>
-<p>I now wanted to drop column ‘c4’ as it is not clear what it actually represents, and I also don’t need whatever it may be for collaborative filtering</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="s1">&#39;_c0&#39;</span><span class="p">,</span> <span class="s1">&#39;_c1&#39;</span><span class="p">,</span> <span class="s1">&#39;_c2&#39;</span><span class="p">,</span> <span class="s1">&#39;_c3&#39;</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>It was necessary to remove the rows that are for purchases instead of play times. These rows also weren’t needed for my collaborative filtering, I just needed to know how much time each user spent playing each game.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;_c2&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;purchase&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>So I was now left with just our user ID, game title and how many hours they have played the game for</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Row(_c0=&#39;151603712&#39;, _c1=&#39;The Elder Scrolls V Skyrim&#39;, _c2=&#39;play&#39;, _c3=&#39;273.0&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<p>I now created a ‘rating’ column that was initially just a duplicate of the play duration column, and also a ‘rating_double’ column which contained a double version of this instead of string</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">_c3</span><span class="p">)</span>
-<span class="n">changedTypedf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;rating_double&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">DoubleType</span><span class="p">()))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Looking at the Schema at this point, I now had a column containing the play times as doubles</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">changedTypedf</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>root
- |-- _c0: string (nullable = true)
- |-- _c1: string (nullable = true)
- |-- _c2: string (nullable = true)
- |-- _c3: string (nullable = true)
- |-- rating: string (nullable = true)
- |-- rating_double: double (nullable = true)
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="create-a-derived-ratings-column">
-<h2>Create a derived Ratings column<a class="headerlink" href="#create-a-derived-ratings-column" title="Permalink to this headline">¶</a></h2>
-<p>The next six cells created a dataframe that gave me the total hours played by any single gamer (gamer_total_hours_played), and what percentage of that total is made up by each game they played (perc_of_gamer_total_hours).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours_by_game</span> <span class="o">=</span> <span class="n">changedTypedf</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;_c0&quot;</span><span class="p">,</span> <span class="s2">&quot;_c1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;rating_double&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours_by_gamer</span> <span class="o">=</span> <span class="n">changedTypedf</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;_c0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;rating_double&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours_by_gamer</span> <span class="o">=</span> <span class="n">hours_by_gamer</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;sum(rating_double)&quot;</span><span class="p">,</span> <span class="s2">&quot;gamer_total_hours_played&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours_by_gamer</span> <span class="o">=</span> <span class="n">hours_by_gamer</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;_c0&quot;</span><span class="p">,</span> <span class="s2">&quot;gamer&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours_by_gamer_by_game</span> <span class="o">=</span> <span class="n">hours_by_game</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hours_by_gamer</span>\
-                     <span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">),</span><span class="n">hours_by_game</span><span class="p">[</span><span class="s1">&#39;_c0&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">hours_by_gamer</span><span class="p">[</span><span class="s1">&#39;gamer&#39;</span><span class="p">],</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours_by_gamer_by_game</span> <span class="o">=</span> <span class="n">hours_by_gamer_by_game</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;perc_of_gamer_total_hours&quot;</span><span class="p">,</span> 
-                                                         <span class="n">hours_by_gamer_by_game</span><span class="p">[</span><span class="s2">&quot;sum(rating_double)&quot;</span><span class="p">]</span><span class="o">/</span> <span class="n">hours_by_gamer_by_game</span><span class="p">[</span><span class="s2">&quot;gamer_total_hours_played&quot;</span><span class="p">]</span> <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours_by_gamer_by_game</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+--------------------+------------------+---------+------------------------+-------------------------+
-|      _c0|                 _c1|sum(rating_double)|    gamer|gamer_total_hours_played|perc_of_gamer_total_hours|
-+---------+--------------------+------------------+---------+------------------------+-------------------------+
-| 26122540|Call of Duty Blac...|              22.0| 26122540|                   182.3|      0.12068019747668678|
-|126340495|     Team Fortress 2|              16.1|126340495|      2770.8999999999996|     0.005810386517016133|
-| 97298878|            Mafia II|              15.9| 97298878|                   220.6|      0.07207615593834996|
-| 11373749|   Fate of the World|               2.3| 11373749|      3943.2000000000016|     5.832826131061064E-4|
-| 46759859|       Day of Defeat|               5.8| 46759859|                   812.8|     0.007135826771653544|
-| 32592631|  Duke Nukem Forever|               8.8| 32592631|                   286.7|     0.030694105336588774|
-| 57103808|   Company of Heroes|              89.0| 57103808|      1276.7000000000005|      0.06971097360382232|
-| 94088853|       ORION Prelude|              13.5| 94088853|       920.4000000000001|      0.01466753585397653|
-|  9823354|Europa Universali...|               2.1|  9823354|       2738.899999999997|     7.667311694475893E-4|
-|249165768|Battlefield Bad C...|               4.0|249165768|                   695.9|     0.005747952291995977|
-+---------+--------------------+------------------+---------+------------------------+-------------------------+
-only showing top 10 rows
-</pre></div>
-</div>
-</div>
-</div>
-<p>Because I now had this information, I was then able to add a ‘rank’ column which will order, from 1 to n, the games played by each gamer in terms of how much time they spent playing them.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranked</span> <span class="o">=</span>  <span class="n">hours_by_gamer_by_game</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;rank&quot;</span><span class="p">,</span> <span class="n">dense_rank</span><span class="p">()</span><span class="o">.</span><span class="n">over</span><span class="p">(</span><span class="n">Window</span><span class="o">.</span><span class="n">partitionBy</span><span class="p">(</span><span class="s2">&quot;gamer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="s2">&quot;perc_of_gamer_total_hours&quot;</span><span class="p">))))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranked</span> <span class="o">=</span> <span class="n">ranked</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;gamer_total_hours_played&quot;</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ranked</span><span class="p">[</span><span class="s2">&quot;gamer_total_hours_played&quot;</span><span class="p">],</span> <span class="mi">2</span><span class="p">))</span>
-<span class="n">ranked</span> <span class="o">=</span> <span class="n">ranked</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;perc_of_gamer_total_hours&quot;</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ranked</span><span class="p">[</span><span class="s2">&quot;perc_of_gamer_total_hours&quot;</span><span class="p">],</span> <span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranked</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+--------------------+------------------+---------+------------------------+-------------------------+----+
-|      _c0|                 _c1|sum(rating_double)|    gamer|gamer_total_hours_played|perc_of_gamer_total_hours|rank|
-+---------+--------------------+------------------+---------+------------------------+-------------------------+----+
-|108750879|       Borderlands 2|             758.0|108750879|                  1807.5|                     0.42|   1|
-|108750879|The Elder Scrolls...|             511.0|108750879|                  1807.5|                     0.28|   2|
-|108750879|Call of Duty Mode...|             149.0|108750879|                  1807.5|                     0.08|   3|
-|108750879|       Saints Row IV|             117.0|108750879|                  1807.5|                     0.06|   4|
-|108750879|           Fallout 4|              77.0|108750879|                  1807.5|                     0.04|   5|
-|108750879|   Fallout New Vegas|              71.0|108750879|                  1807.5|                     0.04|   6|
-|108750879|Saints Row The Third|              33.0|108750879|                  1807.5|                     0.02|   7|
-|108750879|    Metro Last Light|              26.0|108750879|                  1807.5|                     0.01|   8|
-|108750879|              Dota 2|              25.0|108750879|                  1807.5|                     0.01|   9|
-|108750879|          F.E.A.R. 3|              17.2|108750879|                  1807.5|                     0.01|  10|
-+---------+--------------------+------------------+---------+------------------------+-------------------------+----+
-only showing top 10 rows
-</pre></div>
-</div>
-</div>
-</div>
-<p>Above we can now the top 10 played games for gamer ‘108750879’</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_ranked</span> <span class="o">=</span> <span class="n">ranked</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;sum(rating_double)&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_ranked</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+--------------------+---------+------------------------+-------------------------+----+
-|      _c0|                 _c1|    gamer|gamer_total_hours_played|perc_of_gamer_total_hours|rank|
-+---------+--------------------+---------+------------------------+-------------------------+----+
-|108750879|       Borderlands 2|108750879|                  1807.5|                     0.42|   1|
-|108750879|The Elder Scrolls...|108750879|                  1807.5|                     0.28|   2|
-|108750879|Call of Duty Mode...|108750879|                  1807.5|                     0.08|   3|
-|108750879|       Saints Row IV|108750879|                  1807.5|                     0.06|   4|
-|108750879|           Fallout 4|108750879|                  1807.5|                     0.04|   5|
-|108750879|   Fallout New Vegas|108750879|                  1807.5|                     0.04|   6|
-|108750879|Saints Row The Third|108750879|                  1807.5|                     0.02|   7|
-|108750879|    Metro Last Light|108750879|                  1807.5|                     0.01|   8|
-|108750879|              Dota 2|108750879|                  1807.5|                     0.01|   9|
-|108750879|          F.E.A.R. 3|108750879|                  1807.5|                     0.01|  10|
-|108750879|Call of Duty Mode...|108750879|                  1807.5|                     0.01|  11|
-|108750879|            Warframe|108750879|                  1807.5|                      0.0|  12|
-|108750879|     Team Fortress 2|108750879|                  1807.5|                      0.0|  13|
-|108750879|Blacklight Tango ...|108750879|                  1807.5|                      0.0|  14|
-|108750879|             Nosgoth|108750879|                  1807.5|                      0.0|  14|
-|109278470|Counter-Strike Gl...|109278470|                    76.0|                     0.99|   1|
-|109278470|Half-Life 2 Episo...|109278470|                    76.0|                     0.01|   2|
-|109278470|     Team Fortress 2|109278470|                    76.0|                     0.01|   2|
-|110840027|     Team Fortress 2|110840027|                     0.2|                      1.0|   1|
-|121154091|     Team Fortress 2|121154091|                     3.0|                      1.0|   1|
-+---------+--------------------+---------+------------------------+-------------------------+----+
-only showing top 20 rows
-</pre></div>
-</div>
-</div>
-</div>
-<p>The Spark ML function, ‘QuantileDiscretizer’ allowed me to assign a rating (0-9) from each gamer for each game, by separating the games they played into buckets based on the time spent playing.</p>
-<p>The game that they spent the most time playing would receive a 9 for example.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">game_rated</span> <span class="o">=</span> <span class="n">QuantileDiscretizer</span><span class="p">(</span><span class="n">numBuckets</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">inputCol</span><span class="o">=</span><span class="s2">&quot;perc_of_gamer_total_hours&quot;</span><span class="p">,</span><span class="n">outputCol</span><span class="o">=</span><span class="s2">&quot;rating&quot;</span><span class="p">)</span>\
-<span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">hours_by_gamer_by_game</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">hours_by_gamer_by_game</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span> <span class="o">=</span> <span class="n">game_rated</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;gamer&quot;</span><span class="p">,</span><span class="s2">&quot;_c1&quot;</span><span class="p">,</span> <span class="s2">&quot;rating&quot;</span><span class="p">,</span><span class="s2">&quot;perc_of_gamer_total_hours&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span> <span class="o">=</span> <span class="n">ratings</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;_c1&quot;</span><span class="p">,</span> <span class="s2">&quot;game&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+--------------------+------+-------------------------+
-|    gamer|                game|rating|perc_of_gamer_total_hours|
-+---------+--------------------+------+-------------------------+
-| 26122540|Call of Duty Blac...|   7.0|      0.12068019747668678|
-|126340495|     Team Fortress 2|   4.0|     0.005810386517016133|
-| 97298878|            Mafia II|   7.0|      0.07207615593834996|
-| 11373749|   Fate of the World|   1.0|     5.832826131061064E-4|
-| 46759859|       Day of Defeat|   4.0|     0.007135826771653544|
-| 32592631|  Duke Nukem Forever|   6.0|     0.030694105336588774|
-| 57103808|   Company of Heroes|   7.0|      0.06971097360382232|
-| 94088853|       ORION Prelude|   5.0|      0.01466753585397653|
-|  9823354|Europa Universali...|   1.0|     7.667311694475893E-4|
-|249165768|Battlefield Bad C...|   4.0|     0.005747952291995977|
-|130280718|              Dota 2|   7.0|      0.05423353624792473|
-| 25096601|              Dota 2|   8.0|      0.25513254933227025|
-| 25096601|Chivalry Medieval...|   2.0|     0.001195933824995...|
-| 82235763|           Homefront|   9.0|                      1.0|
-| 92914917|     Sniper Elite V2|   1.0|     4.014362496933477E-4|
-| 92914917|           Sanctum 2|   1.0|     3.345302080777897...|
-| 72842694|   Talisman Prologue|   3.0|     0.002284968173657...|
-| 72842694|             Strider|   2.0|     0.001958544148849358|
-|  4834220|           Fallout 4|   5.0|     0.009562445667922338|
-| 65958466|       Stronghold HD|   3.0|     0.004033699259637477|
-+---------+--------------------+------+-------------------------+
-only showing top 20 rows
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span> <span class="o">=</span> <span class="n">ratings</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;gamer&quot;</span><span class="p">,</span> <span class="n">ratings</span><span class="p">[</span><span class="s2">&quot;gamer&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">IntegerType</span><span class="p">()))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+--------------------+------+-------------------------+
-|    gamer|                game|rating|perc_of_gamer_total_hours|
-+---------+--------------------+------+-------------------------+
-| 26122540|Call of Duty Blac...|   7.0|      0.12068019747668678|
-|126340495|     Team Fortress 2|   4.0|     0.005810386517016133|
-| 97298878|            Mafia II|   7.0|      0.07207615593834996|
-| 11373749|   Fate of the World|   1.0|     5.832826131061064E-4|
-| 46759859|       Day of Defeat|   4.0|     0.007135826771653544|
-| 32592631|  Duke Nukem Forever|   6.0|     0.030694105336588774|
-| 57103808|   Company of Heroes|   7.0|      0.06971097360382232|
-| 94088853|       ORION Prelude|   5.0|      0.01466753585397653|
-|  9823354|Europa Universali...|   1.0|     7.667311694475893E-4|
-|249165768|Battlefield Bad C...|   4.0|     0.005747952291995977|
-+---------+--------------------+------+-------------------------+
-only showing top 10 rows
-</pre></div>
-</div>
-</div>
-</div>
-<p>It can be seen above that I now had the rating from each gamer for each game. I needed a game_id column for the model as it doesn’t take in strings and so this next cell achieved this. It gave a unique game_id from 1 to n (n being the total number of games) to each game in the list</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span> <span class="o">=</span> <span class="n">ratings</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;game_id&quot;</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">dense_rank</span><span class="p">()</span><span class="o">.</span><span class="n">over</span><span class="p">(</span><span class="n">Window</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">game</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="build-and-train-the-model">
-<h2>Build and train the Model<a class="headerlink" href="#build-and-train-the-model" title="Permalink to this headline">¶</a></h2>
-<p>I was now able to split these ratings into training and test sets</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">ratings</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.2</span><span class="p">],</span> <span class="n">seed</span> <span class="o">=</span> <span class="mi">36</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Next I defined the alternating least squares model for collaborative filtering</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.ml.recommendation</span> <span class="kn">import</span> <span class="n">ALS</span>
-
-
-<span class="n">als</span> <span class="o">=</span> <span class="n">ALS</span><span class="p">(</span><span class="n">maxIter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">regParam</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">userCol</span><span class="o">=</span><span class="s2">&quot;gamer&quot;</span><span class="p">,</span> <span class="n">itemCol</span><span class="o">=</span><span class="s2">&quot;game_id&quot;</span><span class="p">,</span> <span class="n">ratingCol</span><span class="o">=</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span>
-          <span class="n">coldStartStrategy</span><span class="o">=</span><span class="s2">&quot;drop&quot;</span><span class="p">,</span> <span class="n">nonnegative</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Fit the model to the training set</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">als</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">training</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Use the model to make predictions on the test set</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+--------------------+------+-------------------------+-------+----------+
-|    gamer|                game|rating|perc_of_gamer_total_hours|game_id|prediction|
-+---------+--------------------+------+-------------------------+-------+----------+
-|298890193|                  C9|   5.0|     0.008174386920980927|    463| 10.399544|
-|141773234|                  C9|   0.0|     5.068166844052507E-5|    463| 2.2671351|
-| 65229865|Europa Universali...|   8.0|       0.5202312138728324|   1088|  9.895632|
-| 58217836|Europa Universali...|   4.0|      0.00728108833109791|   1088| 3.2841067|
-| 75368808|Europa Universali...|   8.0|      0.22816053345276305|   1088|   6.60545|
-| 65958466|Europa Universali...|   4.0|     0.007658922644881285|   1088| 2.6655507|
-| 42695514|Football Manager ...|   5.0|     0.008433107756376887|   1238|  6.052161|
-| 40080833|Football Manager ...|   6.0|     0.037704231252618355|   1238| 5.8518333|
-|113260911|Football Manager ...|   7.0|      0.06747638326585695|   1238| 7.8499417|
-| 84925352|Football Manager ...|   7.0|      0.13810198300283288|   1238| 14.121485|
-| 81054122|Football Manager ...|   5.0|     0.015455950540958269|   1238| 12.906618|
-| 10302000|Football Manager ...|   7.0|      0.06990411382616765|   1238| 4.2817283|
-|131785763|Infinity Wars - A...|   1.0|     4.404316229905308E-4|   1580| 1.1740297|
-|120514307|Infinity Wars - A...|   8.0|       0.2422480620155039|   1580|  9.999819|
-| 14544587|Infinity Wars - A...|   0.0|     2.212090302441902...|   1580| 5.1255918|
-|131876863|Infinity Wars - A...|   0.0|     3.132832080200502E-4|   1580| 14.497024|
-| 69953893|Infinity Wars - A...|   0.0|     2.871912693854107E-4|   1580| 2.9354901|
-| 30519870|               Mafia|   1.0|       7.4162448005675E-4|   1829| 3.8883429|
-| 58345543|Steel Storm Burni...|   3.0|     0.003200232744199...|   2866|0.63559055|
-| 98561727|         Audiosurf 2|   6.0|     0.023094688221709007|    243|  16.11771|
-+---------+--------------------+------+-------------------------+-------+----------+
-only showing top 20 rows
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="evaluate-the-model">
-<h2>Evaluate the Model<a class="headerlink" href="#evaluate-the-model" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evaluator</span> <span class="o">=</span> <span class="n">RegressionEvaluator</span><span class="p">(</span><span class="n">metricName</span><span class="o">=</span><span class="s1">&#39;rmse&#39;</span><span class="p">,</span> <span class="n">labelCol</span><span class="o">=</span><span class="s1">&#39;rating&#39;</span><span class="p">)</span>
-<span class="n">rmse</span> <span class="o">=</span> <span class="n">evaluator</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Root-mean-square error = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rmse</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Root-mean-square error = 3.1969283493060523
-</pre></div>
-</div>
-</div>
-</div>
-<p>Having evaluated the performance using root mean square error, I could see it was around 3. This isn’t amazing for a range of 0 to 9 but it would still likely produce useful recommendations</p>
-</div>
-<div class="section" id="recommendations">
-<h2>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this headline">¶</a></h2>
-<p>It was now time to get some actual recommendations based on the model. First I wanted to get the top 20 gamers in terms of hours played which I did in the next cell</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_gamers</span> <span class="o">=</span> <span class="n">changedTypedf</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="n">changedTypedf</span><span class="p">[</span><span class="s1">&#39;_c0&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;_c3&#39;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s2">&quot;sum(_c3)&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">top_gamers</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+------------------+
-|      _c0|          sum(_c3)|
-+---------+------------------+
-| 73017395|           11754.0|
-| 10599862|11651.699999999999|
-|100630947|           10853.2|
-| 26762388|10470.100000000004|
-|153382649|            9640.0|
-| 43684632| 9546.299999999988|
-| 48798067| 9427.199999999997|
-| 52731290|            9417.6|
-| 42935819|            8172.9|
-| 14544587|8137.0999999999985|
-| 52567955|            7836.7|
-|130882834|            7801.9|
-| 57433226| 7741.499999999999|
-| 63615483| 7190.400000000001|
-| 47063596| 7161.000000000001|
-| 67694595| 7152.100000000001|
-| 17017968|            7108.5|
-| 50818751| 6929.899999999999|
-| 49893565|            6891.9|
-| 24721232|            6887.0|
-+---------+------------------+
-</pre></div>
-</div>
-</div>
-</div>
-<p>I placed these gamers into a list that I could then use</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top20_gamer_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="o">.</span><span class="n">_c0</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">top_gamers</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;_c0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">()]</span>
-<span class="n">top20_gamer_list</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;73017395&#39;,
- &#39;10599862&#39;,
- &#39;100630947&#39;,
- &#39;26762388&#39;,
- &#39;153382649&#39;,
- &#39;43684632&#39;,
- &#39;48798067&#39;,
- &#39;52731290&#39;,
- &#39;42935819&#39;,
- &#39;14544587&#39;,
- &#39;52567955&#39;,
- &#39;130882834&#39;,
- &#39;57433226&#39;,
- &#39;63615483&#39;,
- &#39;47063596&#39;,
- &#39;67694595&#39;,
- &#39;17017968&#39;,
- &#39;50818751&#39;,
- &#39;49893565&#39;,
- &#39;24721232&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Using this list and the model, I created a dictionary containing all 20 top gamers and the top 10 game recommendations for each</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gamer_recs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">recommendForAllUsers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="n">rec_game_top20_gamers</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="k">for</span> <span class="n">gamer</span> <span class="ow">in</span> <span class="n">top20_gamer_list</span><span class="p">:</span>
-    <span class="n">rec_game</span> <span class="o">=</span> <span class="n">gamer_recs</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">gamer_recs</span><span class="o">.</span><span class="n">gamer</span> <span class="o">==</span> <span class="n">gamer</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;recommendations&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-    <span class="n">rec_game_top20_gamers</span><span class="p">[</span><span class="n">gamer</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">game_id</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rec_game</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;recommendations&quot;</span><span class="p">]]</span>
-
-<span class="n">rec_game_top20_gamers</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;73017395&#39;: [2521, 2074, 3007, 1184, 1127, 944, 871, 2151, 84, 2513],
- &#39;10599862&#39;: [1999, 3404, 2797, 2301, 3406, 944, 916, 871, 3448, 650],
- &#39;100630947&#39;: [966, 1440, 2797, 2513, 1705, 1788, 1092, 3118, 108, 2699],
- &#39;26762388&#39;: [84, 2521, 108, 3404, 779, 1815, 1940, 1617, 2547, 3524],
- &#39;153382649&#39;: [2074, 3404, 2634, 1999, 1113, 2521, 1184, 1790, 2301, 3406],
- &#39;43684632&#39;: [2301, 3406, 84, 3404, 1292, 1127, 1113, 3054, 650, 2634],
- &#39;48798067&#39;: [2151, 944, 650, 3406, 1127, 916, 2301, 1184, 871, 2634],
- &#39;52731290&#39;: [2301, 3406, 650, 1292, 1127, 1113, 1999, 916, 2634, 608],
- &#39;42935819&#39;: [2797, 3448, 2707, 2852, 2221, 966, 1440, 1492, 754, 2513],
- &#39;14544587&#39;: [2797, 3448, 1999, 966, 2221, 2707, 2852, 1440, 3406, 3373],
- &#39;52567955&#39;: [2699, 966, 668, 1857, 2377, 2797, 1440, 3391, 2828, 2353],
- &#39;130882834&#39;: [1999, 2797, 3404, 2301, 3448, 3406, 966, 108, 84, 2513],
- &#39;57433226&#39;: [779, 2828, 84, 3404, 2521, 1673, 108, 668, 2547, 1940],
- &#39;63615483&#39;: [3007, 1999, 2074, 1609, 2134, 1806, 1087, 1869, 2491, 2297],
- &#39;47063596&#39;: [3406, 2301, 1292, 1113, 2634, 1999, 608, 1672, 3054, 3384],
- &#39;67694595&#39;: [3406, 2301, 3404, 1113, 1292, 84, 2634, 3524, 608, 1231],
- &#39;17017968&#39;: [3007, 1999, 2074, 1609, 2134, 1869, 1806, 2297, 1087, 2772],
- &#39;50818751&#39;: [3406, 2634, 1999, 2301, 650, 1790, 1113, 1292, 916, 3007],
- &#39;49893565&#39;: [1184, 2074, 2521, 1424, 3007, 3021, 754, 944, 2634, 1816],
- &#39;24721232&#39;: [1184, 2634, 3021, 2074, 2521, 754, 1492, 1424, 1790, 1816]}
-</pre></div>
-</div>
-</div>
-</div>
-<p>I wanted a list of game titles and their game ids so that I could see what the actual game recommendations were</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">game_list</span> <span class="o">=</span> <span class="n">ratings</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;game_id&#39;</span><span class="p">,</span> <span class="s1">&#39;game&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">()</span>
-<span class="n">game_list</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------+--------------------+
-|game_id|                game|
-+-------+--------------------+
-|      1|         007 Legends|
-|      2|           0RBITALIS|
-|      3|1... 2... 3... KI...|
-|      4|     10 Second Ninja|
-|      5|          10,000,000|
-|      6|   100% Orange Juice|
-|      7|           1000 Amps|
-|      8|12 Labours of Her...|
-|      9|12 Labours of Her...|
-|     10|12 Labours of Her...|
-|     11|                 140|
-|     12|             15 Days|
-|     13|        16bit Trader|
-|     14|1701 A.D. Sunken ...|
-|     15|18 Wheels of Stee...|
-|     16|1953 NATO vs Wars...|
-|     17|              1Quest|
-|     18|  3 Stars of Destiny|
-|     19|3089 -- Futuristi...|
-|     20|        3D Mini Golf|
-+-------+--------------------+
-only showing top 20 rows
-</pre></div>
-</div>
-</div>
-</div>
-<p>I took one of the gamers as user1, (gamer id ‘10599862’) and had a look at the recommendations and also the actual games they played the most of</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user1_recommend</span> <span class="o">=</span> <span class="n">game_list</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">game_list</span><span class="p">[</span><span class="s2">&quot;game_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">rec_game_top20_gamers</span><span class="p">[</span><span class="s1">&#39;10599862&#39;</span><span class="p">]))</span>
-<span class="n">user1_recommend</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DataFrame[game_id: int, game: string]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user1_recommend</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------+--------------------+
-|game_id|                game|
-+-------+--------------------+
-|    650|Construction-Simu...|
-|    871|         Diaper Dash|
-|    916|Don Bradman Crick...|
-|    944|Dragon&#39;s Prophet ...|
-|   1999|             NBA 2K9|
-|   2301|Professional Farm...|
-|   2797|Speedball 2 Tourn...|
-|   3404|               WRC 5|
-|   3406|WTFast Gamers Pri...|
-|   3448|Warrior Kings Bat...|
-+-------+--------------------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">gamer</span><span class="o">==</span><span class="s2">&quot;10599862&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+--------------------+------+-------------------------+-------+
-|   gamer|                game|rating|perc_of_gamer_total_hours|game_id|
-+--------+--------------------+------+-------------------------+-------+
-|10599862|   Crusader Kings II|   7.0|      0.05767398748680451|    701|
-|10599862|     Elite Dangerous|   7.0|      0.06402499206124429|   1033|
-|10599862|Football Manager ...|   7.0|      0.04986396834796639|   1236|
-|10599862|Mount &amp; Blade War...|   7.0|      0.07552545980414876|   1969|
-|10599862|       Path of Exile|   7.0|      0.06737214312074634|   2198|
-|10599862|Total War ROME II...|   7.0|      0.09105967369568391|   3266|
-|10599862|       DARK SOULS II|   6.0|     0.017593999158921018|    727|
-|10599862|The Elder Scrolls...|   6.0|     0.018108945475767486|   3068|
-|10599862|    Total War ATTILA|   6.0|      0.03587459340697066|   3263|
-|10599862|The Witcher 3 Wil...|   6.0|     0.017336526000497784|   3180|
-+--------+--------------------+------+-------------------------+-------+
-</pre></div>
-</div>
-</div>
-</div>
-<p>I could see that the recommendations passed a basic sanity test at least, Sports games and Fantasy games were being recommended to user1 and I could see that similar games appear in their top played games</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user2_recommend</span> <span class="o">=</span> <span class="n">game_list</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">game_list</span><span class="p">[</span><span class="s2">&quot;game_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">rec_game_top20_gamers</span><span class="p">[</span><span class="s1">&#39;100630947&#39;</span><span class="p">]))</span>
-<span class="n">user2_recommend</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------+--------------------+
-|game_id|                game|
-+-------+--------------------+
-|    108|Air Conflicts Pac...|
-|    966| Duke Nukem Forever |
-|   1092|        EverQuest II|
-|   1440|Hacker Evolution ...|
-|   1705|LEGO Batman The V...|
-|   1788|Lost Planet Extre...|
-|   2513|Rugby League Team...|
-|   2699|Silent Hill Homec...|
-|   2797|Speedball 2 Tourn...|
-|   3118|             The Maw|
-+-------+--------------------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">gamer</span><span class="o">==</span><span class="s2">&quot;100630947&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+--------------------+------+-------------------------+-------+
-|    gamer|                game|rating|perc_of_gamer_total_hours|game_id|
-+---------+--------------------+------+-------------------------+-------+
-|100630947|              Dota 2|   8.0|       0.9621125566653153|    923|
-|100630947|Counter-Strike Gl...|   6.0|      0.03731618324549441|    674|
-|100630947|        Aura Kingdom|   0.0|     1.842774481258983...|    247|
-|100630947|FreeStyle2 Street...|   0.0|     2.303468101573729...|   1264|
-|100630947|       Left 4 Dead 2|   0.0|     9.213872406294918E-6|   1734|
-|100630947|                Rust|   0.0|     3.132716618140272E-4|   2524|
-+---------+--------------------+------+-------------------------+-------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user3_recommend</span> <span class="o">=</span> <span class="n">game_list</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">game_list</span><span class="p">[</span><span class="s2">&quot;game_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">rec_game_top20_gamers</span><span class="p">[</span><span class="s1">&#39;26762388&#39;</span><span class="p">]))</span>
-<span class="n">user3_recommend</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------+--------------------+
-|game_id|                game|
-+-------+--------------------+
-|     84|Afterfall InSanit...|
-|    108|Air Conflicts Pac...|
-|    779|            Daylight|
-|   1617|Jagged Alliance F...|
-|   1815|            MLB 2K12|
-|   1940| Missing Translation|
-|   2521|    Runestone Keeper|
-|   2547|STORM Frontline N...|
-|   3404|               WRC 5|
-|   3524|X-Plane 10 Global...|
-+-------+--------------------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ratings</span><span class="o">.</span><span class="n">gamer</span><span class="o">==</span><span class="s2">&quot;26762388&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------+--------------------+------+-------------------------+-------+
-|   gamer|                game|rating|perc_of_gamer_total_hours|game_id|
-+--------+--------------------+------+-------------------------+-------+
-|26762388|Mount &amp; Blade War...|   7.0|      0.07879580901806092|   1969|
-|26762388|The Elder Scrolls...|   7.0|      0.10410597797537746|   3068|
-|26762388|Chivalry Medieval...|   6.0|     0.032473424322594806|    560|
-|26762388|           Far Cry 3|   6.0|      0.02234935673966819|   1171|
-|26762388|Counter-Strike So...|   6.0|      0.03018118260570576|    676|
-|26762388|Age of Empires II...|   6.0|     0.021680786238908886|     93|
-|26762388| Assassin&#39;s Creed II|   6.0|     0.017382833019741924|    226|
-|26762388|Assassin&#39;s Creed ...|   6.0|     0.017669363234353055|    228|
-|26762388|              Dota 2|   6.0|     0.022444866811205232|    923|
-|26762388|  Dragon Age Origins|   6.0|     0.038681578972502635|    934|
-+--------+--------------------+------+-------------------------+-------+
-</pre></div>
-</div>
-</div>
-</div>
-<p>I did the same for two more users and again I was happy enough with the reccomendations. At this point I was fairly confident that the system was doing its job and likely making some useful recommendations</p>
+  <div class="section" id="data-science-code-of-ethics-overview">
+<h1>DATA SCIENCE CODE OF ETHICS OVERVIEW<a class="headerlink" href="#data-science-code-of-ethics-overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-dataset">
+<h2>The Dataset<a class="headerlink" href="#the-dataset" title="Permalink to this headline">¶</a></h2>
+<p>The dataset I am using here is a list of 200,000 Steam Video Game user behaviors, with user-id, game-title, behavior-name, value. The behaviors included are ‘own’ and ‘play’. The behaviour I am interested in is ‘play’ as this is a numeric figure, representing how many hours the particular user has spent playing the games that they have purchased. I will be using this to create a derived rating score that the recommender system will then be able to use.</p>
+</div>
+<div class="section" id="system-types">
+<h2>System Types<a class="headerlink" href="#system-types" title="Permalink to this headline">¶</a></h2>
+<p><strong>Collaborative Filtering -</strong></p>
+<p>This approach to recommendation requires a lot of data about users’ preferences. Collaborative filtering doesn’t know anything about the content itself, it doesn’t attempt to analyse them at all. Instead it makes the assumption that if User A tends to give similar weights to content that User B does, they both enjoy similar content. Therefore, if User B likes content that User A has not been exposed to yet, it’s likely that User A will be happy to have that content recommended to them. This user preference data can either be explicit (the user actually rates the content) or implicit (analyse which content the user engages with most often and for long periods of time). Due to Collaborative Filtering’s reliance on user data, it suffers from what’s known as the “Cold Start” problem. Brand new users have no preference data, and so the system will always struggle to know what to recommend.</p>
+<p><strong>Content-Based Filtering -</strong></p>
+<p>Unlike the previous approach, here the content being recommended is also closely analysed. It can be a lot more difficult to collect the data as it’s not at all easy to identify how the individual features relate to user preferences. Two main data categories are used in content based music recommendation systems. Metadata about the content, and also the content itself. For music as an example, this can be features such as beats per minute, what chords are played in the song, and even just how loud it is. One big advantage that content based filtering has over collaborative filtering is that it can be difficult to get users to actually rate content, whereas the content itself can often be freely analysed.</p>
+<p><strong>Hybrid Model -</strong></p>
+<p>This is exactly as it sounds, with a blend of both collaborative filtering and content based filtering. These models can outperform either of the other two on their own, but it is difficult to find data that combines both user ratings and actual data about the content itself.</p>
+<p><strong>My Approach -</strong></p>
+<p>For this recommender system, I will be using Collaborative Filtering with Spark ML. The dataset doesn’t contain any information about the video games themselves, just user preference, and so this is the only real choice that I have here.</p>
 </div>
 </div>
 
@@ -1077,6 +291,7 @@ only showing top 20 rows
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="Intro_and_Desc_of_Data.html" title="previous page">DATASET AND TYPES OF RECOMMENDER SYSTEMS</a>
+    <a class='right-next' id="next-link" href="SecondPage.html" title="next page">DATA SCIENCE CODE OF ETHICS OVERVIEW</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
