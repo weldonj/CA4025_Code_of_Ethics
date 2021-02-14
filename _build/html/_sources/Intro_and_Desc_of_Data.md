@@ -1,18 +1,18 @@
 ## OVERVIEW
 
-### System Types
+### Ethical Considerations
 
-**Collaborative Filtering -**
-
-
-
-**Content-Based Filtering -**
+**Data Collection -**
 
 
 
-**Hybrid Model -**
+**Data Analysis and Modelling -**
 
 
 
-**My Approach -**
+**Data Storage -**
+
+
+
+**Team Structure and Environmental Concerns -**
 
