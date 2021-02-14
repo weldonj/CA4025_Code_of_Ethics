@@ -8,9 +8,8 @@ While there is a continuing push to improve the diversity within the field of Da
 
 ## References
 
-1 - What's Keeping Women out of Data Science?
-https://www.bcg.com/publications/2020/what-keeps-women-out-data-science
+1 - [What's Keeping Women out of Data Science?](https://www.bcg.com/publications/2020/what-keeps-women-out-data-science)
 
-2 - Data Science Education Lags Behind in Diversity
-https://theindex.generalassemb.ly/data-science-education-lags-behind-in-diversity-ff59ffa718ec
+2 - [Data Science Education Lags Behind in Diversity](https://theindex.generalassemb.ly/data-science-education-lags-behind-in-diversity-ff59ffa718ec)
+
 
