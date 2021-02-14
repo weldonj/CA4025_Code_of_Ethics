@@ -1,6 +1,6 @@
 ## Ensure Informed Consent is Obtained
 
-For any project undertaken that includes human subject data, specific informed consent must be obtained from each individual involved. Everyone on the team should complete an ethics course in working with human subjects, such as CITI's "Human Research Data or Specimens Only Research" course[1].The subjects should be informed what data will be stored, used and for what reason. They should know how long the data will be kept for and whether it will be made public or kept private within the data science team. 
+For any project undertaken that includes human subject data, specific informed consent must be obtained from each individual involved. Everyone on the team should complete an ethics course in working with human subjects, such as CITI's "Human Research Data or Specimens Only Research" course[1].The subjects should be informed what data will be stored, used and for what reason. They should know how long the data will be kept for and whether it will be made public or kept private within the Data Science team. 
 
 ## Only Collect Data that is Relevant for the Proposed Project
 
