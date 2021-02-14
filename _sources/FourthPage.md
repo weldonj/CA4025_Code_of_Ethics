@@ -1,6 +1,6 @@
 ## Ensure Stored Data is Safe and Secure
 
-The data being used in most data science projects will be private and sensitive. It's therefore imperative that it be encrypted where possible when being transferred and while not in use at all and at rest. There should be controls on who can access the data and how long they can access it for, and also logging systems in place to allow the monitoring access. Only those who actually need access should be granted it, and if they move off of the project they should lose access immediately. It should not be stored on local devices such as laptops, where possible, to avoid it being left in a public place or stolen.
+The data being used in most Data Science projects will be private and sensitive. It's therefore imperative that it be encrypted where possible when being transferred and while not in use at all and at rest. There should be controls on who can access the data and how long they can access it for, and also logging systems in place to allow the monitoring access. Only those who actually need access should be granted it, and if they move off of the project they should lose access immediately. It should not be stored on local devices such as laptops, where possible, to avoid it being left in a public place or stolen.
 
 ## Plan for Eventual Deletion
 
