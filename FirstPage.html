@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Informed Consent &#8212; CA4025 - Data Science Code of Ethics - John Weldon</title>
+    <title>Ensure to Obtain Informed Consent &#8212; CA4025 - Data Science Code of Ethics - John Weldon</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,7 +55,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="DATA SCIENCE CODE OF ETHICS OVERVIEW" href="SecondPage.html" />
+    <link rel="next" title="Always be Honest with Results and Findings" href="SecondPage.html" />
     <link rel="prev" title="OVERVIEW" href="Intro_and_Desc_of_Data.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -101,17 +101,17 @@
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Informed Consent
+   Ensure to Obtain Informed Consent
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#data-relevance">
-   Data Relevance
+  <a class="reference internal" href="#only-collect-data-that-is-relevant-to-the-proposed-project">
+   Only Collect Data that is Relevant to the Proposed Project
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#diverse-and-representative-cohort">
-   Diverse and representative Cohort
+  <a class="reference internal" href="#try-to-ensure-that-the-data-is-truly-representative">
+   Try to Ensure that the Data is Truly Representative
   </a>
  </li>
 </ul>
@@ -123,7 +123,17 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="SecondPage.html">
-   DATA SCIENCE CODE OF ETHICS OVERVIEW
+   Always be Honest with Results and Findings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SecondPage.html#always-be-aware-of-and-attempt-to-mitigate-potential-biases">
+   Always be Aware of and Attempt to Mitigate Potential Biases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SecondPage.html#ensure-that-the-work-is-reproducable">
+   Ensure that the Work is Reproducable
   </a>
  </li>
 </ul>
@@ -135,7 +145,17 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="ThirdPage.html">
-   DATA SCIENCE CODE OF ETHICS OVERVIEW
+   Try to Ensure Explainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ThirdPage.html#always-document-biases-and-shortcomings">
+   Always Document Biases and Shortcomings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ThirdPage.html#diverse-and-representative-cohort">
+   Diverse and representative Cohort
   </a>
  </li>
 </ul>
@@ -147,7 +167,17 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="FourthPage.html">
-   DATA SCIENCE CODE OF ETHICS OVERVIEW
+   Ensure Stored Data is Safe and Secure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FourthPage.html#plan-for-eventual-deletion">
+   Plan for Eventual Deletion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FourthPage.html#create-simple-process-for-subjects-to-request-deletion">
+   Create Simple Process for Subjects to Request Deletion
   </a>
  </li>
 </ul>
@@ -159,7 +189,12 @@
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="FifthPage.html">
-   DATA SCIENCE CODE OF ETHICS OVERVIEW
+   Consider the Environemnt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FifthPage.html#create-diverse-teams">
+   Create Diverse Teams
   </a>
  </li>
 </ul>
@@ -234,17 +269,17 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Informed Consent
+   Ensure to Obtain Informed Consent
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-relevance">
-   Data Relevance
+  <a class="reference internal nav-link" href="#only-collect-data-that-is-relevant-to-the-proposed-project">
+   Only Collect Data that is Relevant to the Proposed Project
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diverse-and-representative-cohort">
-   Diverse and representative Cohort
+  <a class="reference internal nav-link" href="#try-to-ensure-that-the-data-is-truly-representative">
+   Try to Ensure that the Data is Truly Representative
   </a>
  </li>
 </ul>
@@ -258,16 +293,16 @@
         
               <div>
                 
-  <div class="section" id="informed-consent">
-<h1>Informed Consent<a class="headerlink" href="#informed-consent" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ensure-to-obtain-informed-consent">
+<h1>Ensure to Obtain Informed Consent<a class="headerlink" href="#ensure-to-obtain-informed-consent" title="Permalink to this headline">¶</a></h1>
 <p>The dataset I am using here is a list of 200,000 Steam Video Game user behaviors, with user-id, game-title, behavior-name, value. The behaviors included are ‘own’ and ‘play’. The behaviour I am interested in is ‘play’ as this is a numeric figure, representing how many hours the particular user has spent playing the games that they have purchased. I will be using this to create a derived rating score that the recommender system will then be able to use.</p>
 </div>
-<div class="section" id="data-relevance">
-<h1>Data Relevance<a class="headerlink" href="#data-relevance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="only-collect-data-that-is-relevant-to-the-proposed-project">
+<h1>Only Collect Data that is Relevant to the Proposed Project<a class="headerlink" href="#only-collect-data-that-is-relevant-to-the-proposed-project" title="Permalink to this headline">¶</a></h1>
 <p>This approach to recommendation requires a lot of data about users’ preferences. Collaborative filtering doesn’t know anything about the content itself, it doesn’t attempt to analyse them at all. Instead it makes the assumption that if User A tends to give similar weights to content that User B does, they both enjoy similar content. Therefore, if User B likes content that User A has not been exposed to yet, it’s likely that User A will be happy to have that content recommended to them. This user preference data can either be explicit (the user actually rates the content) or implicit (analyse which content the user engages with most often and for long periods of time). Due to Collaborative Filtering’s reliance on user data, it suffers from what’s known as the “Cold Start” problem. Brand new users have no preference data, and so the system will always struggle to know what to recommend.</p>
 </div>
-<div class="section" id="diverse-and-representative-cohort">
-<h1>Diverse and representative Cohort<a class="headerlink" href="#diverse-and-representative-cohort" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="try-to-ensure-that-the-data-is-truly-representative">
+<h1>Try to Ensure that the Data is Truly Representative<a class="headerlink" href="#try-to-ensure-that-the-data-is-truly-representative" title="Permalink to this headline">¶</a></h1>
 <p>Unlike the previous approach, here the content being recommended is also closely analysed. It can be a lot more difficult to collect the data as it’s not at all easy to identify how the individual features relate to user preferences. Two main data categories are used in content based music recommendation systems. Metadata about the content, and also the content itself. For music as an example, this can be features such as beats per minute, what chords are played in the song, and even just how loud it is. One big advantage that content based filtering has over collaborative filtering is that it can be difficult to get users to actually rate content, whereas the content itself can often be freely analysed.</p>
 </div>
 
@@ -300,7 +335,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="Intro_and_Desc_of_Data.html" title="previous page">OVERVIEW</a>
-    <a class='right-next' id="next-link" href="SecondPage.html" title="next page">DATA SCIENCE CODE OF ETHICS OVERVIEW</a>
+    <a class='right-next' id="next-link" href="SecondPage.html" title="next page">Always be Honest with Results and Findings</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
