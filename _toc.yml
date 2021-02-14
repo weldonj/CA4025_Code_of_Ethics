@@ -1,6 +1,22 @@
 - file: Intro_and_Desc_of_Data
   title: INTRODUCTION AND DESCRIPTION OF DATASET
 
-- part: Recommender System
+- part: Data Collection
   chapters:
   - file: FirstPage
+
+- part: Data Analysis
+  chapters:
+  - file: SecondPage
+
+- part: Data Modelling
+  chapters:
+  - file: ThirdPage
+
+- part: Data Storage
+  chapters:
+  - file: FourthPage
+
+- part: Team and Environment
+  chapters:
+  - file: FifthPage
