@@ -1,4 +1,4 @@
-## DATA SCIENCE CODE OF ETHICS OVERVIEW
+## OVERVIEW
 
 ### The Dataset
 
