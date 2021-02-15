@@ -1,6 +1,6 @@
 ## OVERVIEW AND UNDERLYING MANTRA
 
-Throughout the next five pages I list and describe ethical concerns that I feel are important across all stage of potential Data Science projects. I want to lay out an underlying mantra at this stage however, that I feel should always be present in the background. I want to borrow the hippocratic oath from the field of medicine, and specifically the term "First Do No Harm". 
+Throughout the next five pages I list and describe ethical concerns that I feel are important across all stages of potential Data Science projects. I want to lay out an underlying mantra at this stage however, that I feel should always be present in the background. I want to borrow the hippocratic oath from the field of medicine, and specifically the term "First Do No Harm". 
 
 While it's possible to conceive of certain circumstances where it may be worth causing some harm for an overall net good, I feel that in the vast majority of cases it should be fairly obvious if there is a clear harm associated with a proposed Data Science project or endeavour. I believe that in these cases, one should walk away and not partake. While this may be difficult in industry or similar where one has been instructed by their manager, they should really consider whether the company involved is somewhere they want to be working. 
 
