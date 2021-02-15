@@ -4,7 +4,7 @@ The data being used in most Data Science projects will be private and sensitive.
 
 ## Plan for Eventual Deletion
 
-There should be a plan in place for deletion of all sensitive data once the project is finished and it is no longer needed. If there is data on human subjects, they should be informed of when this deletion date will be at the start of the process if possible, and should be updated if this date has since been moved. New permission may be needed in order to keep the data for longer if the team want to use it for significantly longer than was communicated to the cohort.
+There should be a plan in place for deletion of all sensitive data once the project is finished and it is no longer needed. If there is data on human subjects, they should be informed of when this deletion date will be at the start of the process if possible, and should be updated if this date has since been moved. New permission may be needed in order to keep the data for longer if the team wants to use it for significantly longer than was communicated to the cohort.
 
 ## Create Simple Process for Subjects to Request Deletion
 
