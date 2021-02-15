@@ -4,7 +4,7 @@ When undertaking a Data Science project or task, one may already have a desired 
 
 ## Limit Exposure of Personally Identifiable Information
 
-If there are features in the data that can clearly identify an individual subject but isn't actually useful for analysis (Names, Social Security numbers etc.) these may be removed or hidden before the analysis begins. Each person can simply be assigned an identification number 1 through n (n being the count of subjects). There are also differential privacy methods that can be employed to ensure that no single subject can be identified in the data. 
+If there are features in the data that can clearly identify an individual subject but aren't actually useful for analysis (Names, Social Security numbers etc.) these may be removed or hidden before the analysis begins. Each person can simply be assigned an identification number 1 through n (n being the count of subjects). There are also differential privacy methods that can be employed to ensure that no single subject can be identified in the data. 
 
 ## Ensure that the Work is Reproducible
 
